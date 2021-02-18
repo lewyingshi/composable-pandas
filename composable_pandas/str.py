@@ -43,3 +43,38 @@ def capitalize(col):
     
     """
     return col.str.capitalize()
+
+@pipeable
+def is_month_start(col):
+    """
+    Return True if date is first day of month.
+    """
+    return col.dt.is_month_start
+
+@pipeable
+def is_quarter_start(col):
+    """
+    Return True if date is first day of the quarter.
+    """
+    return col.dt.is_quarter_start
+
+@pipeable
+def is_quarter_end(col):
+    """
+    Return True if date is last day of the quarter.
+    """
+    return col.dt.is_quarter_end
+
+@pipeable
+def is_year_start(col):
+    """
+    Return True if date is first day of the year.
+    """
+    return col.dt.is_year_start
+
+@pipeable
+def is_year_end(col):
+    """
+    Return True if date is last day of the year.
+    """
+    return col.dt.is_year_end
